@@ -81,8 +81,6 @@ class Bot
             $this->close($e->getCode());
         }
 
-        $sc = preg_quote($this->channel, '/');
-
         while (true) {
             $line = $this->getLine();
 
