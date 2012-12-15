@@ -155,15 +155,6 @@ class Bot
         return $line;
     }
 
-    private function consume()
-    {
-        while ($line = $this->getLine()) {
-            if ($this->debug) {
-                $this->log($line);
-            }
-        }
-    }
-
     private function close($code=0)
     {
         fclose($this->sock);
