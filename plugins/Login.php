@@ -35,7 +35,5 @@ class Login implements EventManagerAwareInterface
         $bot->putMsg("USER {$user} {$hostname} {$server} :{$user}");
 
         $bot->putMsg("JOIN #{$chan}");
-
-        echo 'here';
     }
 }
