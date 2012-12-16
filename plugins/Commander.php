@@ -10,7 +10,7 @@ class Commander implements EventManagerAwareInterface
     {
         list($_, $cmd, $msg) = explode(':', $line, 3);
 
-        if (preg_match('/\.([a-z]+)(\s+|$)/u', trim($msg), $m)) {
+        if (preg_match('/^\.([a-z]+)(\s+|$)/u', trim($msg), $m)) {
             $meth = "do_{$m[1]}";
 
             if (method_exists($this, $meth)) {
